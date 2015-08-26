@@ -30,6 +30,7 @@
 
 package org.flintparticles.twoD.zones 
 {
+	import org.flintparticles.common.utils.Maths;
 	import org.flintparticles.twoD.particles.Particle2D;
 
 	import flash.geom.Point;
@@ -284,8 +285,8 @@ package org.flintparticles.twoD.zones
 		 */
 		public function getLocation():Point
 		{
-			var rand:Number = Math.random();
-			var point:Point =  Point.polar( _innerRadius + (1 - rand * rand ) * ( _outerRadius - _innerRadius ), _minAngle + Math.random() * ( _maxAngle - _minAngle ) );
+			var rand:Number = Maths.random();
+			var point:Point =  Point.polar( _innerRadius + (1 - rand * rand ) * ( _outerRadius - _innerRadius ), _minAngle + Maths.random() * ( _maxAngle - _minAngle ) );
 			point.x += _center.x;
 			point.y += _center.y;
 			return point;

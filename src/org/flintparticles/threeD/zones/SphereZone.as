@@ -30,6 +30,7 @@
 
 package org.flintparticles.threeD.zones 
 {
+	import org.flintparticles.common.utils.Maths;
 	import org.flintparticles.threeD.geom.Vector3DUtils;
 
 	import flash.geom.Vector3D;
@@ -127,11 +128,11 @@ package org.flintparticles.threeD.zones
 			var rand:Vector3D;
 			do
 			{
-				rand = new Vector3D( Math.random() - 0.5, Math.random() - 0.5, Math.random() - 0.5 );
+				rand = new Vector3D( Maths.random() - 0.5, Maths.random() - 0.5, Maths.random() - 0.5 );
 			}
 			while ( rand.x == 0 && rand.y == 0 && rand.z == 0 );
 			rand.normalize();
-			var d:Number = Math.random();
+			var d:Number = Maths.random();
 			d = _innerRadius + ( 1 - d * d ) * ( _outerRadius - _innerRadius );
 			rand.scaleBy( d / rand.length );
 			return _center.add( rand );

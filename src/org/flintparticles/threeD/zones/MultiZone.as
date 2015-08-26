@@ -31,6 +31,7 @@
 package org.flintparticles.threeD.zones 
 {
 	import flash.geom.Vector3D;
+	import org.flintparticles.common.utils.Maths;
 
 	/**
 	 * The MutiZone zone defines a zone that combines other zones into one larger zone.
@@ -116,7 +117,7 @@ package org.flintparticles.threeD.zones
 		 */
 		public function getLocation():Vector3D
 		{
-			var selectZone:Number = Math.random() * _totalVolume;
+			var selectZone:Number = Maths.random() * _totalVolume;
 			var len:int = _zones.length;
 			for( var i:int = 0; i < len; ++i )
 			{

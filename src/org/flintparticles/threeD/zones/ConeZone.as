@@ -31,6 +31,7 @@
 package org.flintparticles.threeD.zones 
 {
 	import flash.geom.Vector3D;
+	import org.flintparticles.common.utils.Maths;
 	import org.flintparticles.threeD.geom.Vector3DUtils;	
 
 	/**
@@ -188,13 +189,13 @@ package org.flintparticles.threeD.zones
 				init();
 			}
 
-			var h:Number = Math.random();
+			var h:Number = Maths.random();
 			h = _minDist + ( 1 - h * h ) * ( _maxDist - _minDist );
 			
-			var r:Number = Math.random();
+			var r:Number = Maths.random();
 			r = ( 1 - r * r ) * radiusAtHeight( h );
 			
-			var a:Number = Math.random() * 2 * Math.PI;
+			var a:Number = Maths.random() * 2 * Math.PI;
 			var p1:Vector3D = _perp1.clone();
 			p1.scaleBy( r * Math.cos( a ) );
 			var p2:Vector3D = _perp2.clone();

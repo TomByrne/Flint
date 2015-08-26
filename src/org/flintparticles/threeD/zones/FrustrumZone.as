@@ -30,6 +30,7 @@
 
 package org.flintparticles.threeD.zones 
 {
+	import org.flintparticles.common.utils.Maths;
 	import org.flintparticles.threeD.renderers.Camera;
 
 	import flash.geom.Matrix3D;
@@ -135,10 +136,10 @@ package org.flintparticles.threeD.zones
 		 */
 		public function getLocation():Vector3D
 		{
-			var z:Number = ( Math.random() * ( _camera.farPlaneDistance - _camera.nearPlaneDistance ) ) + _camera.nearPlaneDistance;
+			var z:Number = ( Maths.random() * ( _camera.farPlaneDistance - _camera.nearPlaneDistance ) ) + _camera.nearPlaneDistance;
 			var scale:Number = z / _camera.projectionDistance;
-			var x:Number = ( ( Math.random() * _viewRect.width ) + _viewRect.left ) * scale;
-			var y:Number = ( ( Math.random() * _viewRect.height ) + _viewRect.top ) * scale;
+			var x:Number = ( ( Maths.random() * _viewRect.width ) + _viewRect.left ) * scale;
+			var y:Number = ( ( Maths.random() * _viewRect.height ) + _viewRect.top ) * scale;
 			var p:Vector3D = new Vector3D( x, y, z, 1 );
 			var transform:Matrix3D = _camera.spaceTransform.clone();
 			transform.invert();

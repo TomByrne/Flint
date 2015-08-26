@@ -33,6 +33,7 @@ package org.flintparticles.twoD.initializers
 	import org.flintparticles.common.emitters.Emitter;
 	import org.flintparticles.common.initializers.InitializerBase;
 	import org.flintparticles.common.particles.Particle;	
+	import org.flintparticles.common.utils.Maths;
 
 	/**
 	 * The ScaleAllInit Initializer sets the size of the particles image
@@ -128,7 +129,7 @@ package org.flintparticles.twoD.initializers
 			}
 			else
 			{
-				scale = _min + Math.random() * ( _max - _min );
+				scale = _min + Maths.random() * ( _max - _min );
 			}
 			particle.scale = scale;
 			particle.mass *= scale * scale;

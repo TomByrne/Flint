@@ -33,6 +33,7 @@ package org.flintparticles.threeD.actions
 	import org.flintparticles.common.actions.ActionBase;
 	import org.flintparticles.common.emitters.Emitter;
 	import org.flintparticles.common.particles.Particle;
+	import org.flintparticles.common.utils.Maths;
 	import org.flintparticles.threeD.particles.Particle3D;	
 
 	/**
@@ -105,9 +106,9 @@ package org.flintparticles.threeD.actions
 		override public function update( emitter:Emitter, particle:Particle, time:Number ):void
 		{
 			var p:Particle3D = Particle3D( particle );
-			p.velocity.x += ( Math.random() - 0.5 ) * _driftX * time;
-			p.velocity.y += ( Math.random() - 0.5 ) * _driftY * time;
-			p.velocity.z += ( Math.random() - 0.5 ) * _driftZ * time;
+			p.velocity.x += ( Maths.random() - 0.5 ) * _driftX * time;
+			p.velocity.y += ( Maths.random() - 0.5 ) * _driftY * time;
+			p.velocity.z += ( Maths.random() - 0.5 ) * _driftZ * time;
 		}
 	}
 }

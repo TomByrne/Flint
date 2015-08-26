@@ -221,7 +221,7 @@ package org.flintparticles.common.utils
 		 */
 		public function getRandomValue():*
 		{
-			var position:Number = Math.random() * _totalWeights;
+			var position:Number = Maths.random() * _totalWeights;
 			var current:Number = 0;
 			var len:int = _values.length;
 			for( var i:int = 0; i < len; ++i )

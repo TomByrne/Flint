@@ -33,6 +33,7 @@ package org.flintparticles.twoD.initializers
 	import org.flintparticles.common.emitters.Emitter;
 	import org.flintparticles.common.initializers.InitializerBase;
 	import org.flintparticles.common.particles.Particle;
+	import org.flintparticles.common.utils.Maths;
 	import org.flintparticles.twoD.particles.Particle2D;	
 
 	/**
@@ -118,7 +119,7 @@ package org.flintparticles.twoD.initializers
 			}
 			else
 			{
-				p.rotation = _min + Math.random() * ( _max - _min );
+				p.rotation = _min + Maths.random() * ( _max - _min );
 			}
 		}
 	}

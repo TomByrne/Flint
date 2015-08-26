@@ -30,6 +30,7 @@
 
 package org.flintparticles.threeD.zones 
 {
+	import org.flintparticles.common.utils.Maths;
 	import org.flintparticles.threeD.geom.Matrix3DUtils;
 	import org.flintparticles.threeD.geom.Vector3DUtils;
 
@@ -196,7 +197,7 @@ package org.flintparticles.threeD.zones
 			{
 				init();
 			}
-			var p:Vector3D = new Vector3D( Math.random() * _width, Math.random() * _height, Math.random() * _depth, 1 );
+			var p:Vector3D = new Vector3D( Maths.random() * _width, Maths.random() * _height, Maths.random() * _depth, 1 );
 			p = _transformFrom.transformVector( p );
 			return p;
 		}

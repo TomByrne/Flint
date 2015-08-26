@@ -32,6 +32,7 @@ package org.flintparticles.common.initializers
 {
 	import org.flintparticles.common.emitters.Emitter;
 	import org.flintparticles.common.particles.Particle;	
+	import org.flintparticles.common.utils.Maths;
 
 	/**
 	 * The ScaleImageInit Initializer adjusts the size of the particles image.
@@ -129,7 +130,7 @@ package org.flintparticles.common.initializers
 			}
 			else
 			{
-				particle.scale = _min + Math.random() * ( _max - _min );
+				particle.scale = _min + Maths.random() * ( _max - _min );
 			}
 		}
 	}

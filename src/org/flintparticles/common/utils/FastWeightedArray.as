@@ -108,7 +108,7 @@ package org.flintparticles.common.utils
 		 */
 		public function getRandomValue():*
 		{
-			var position:Number = Math.random() * _totalRatios;
+			var position:Number = Maths.random() * _totalRatios;
 			var low:uint = 0;
 			var mid:uint;
 			var high:uint = _values.length;

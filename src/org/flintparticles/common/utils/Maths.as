@@ -59,5 +59,29 @@ package org.flintparticles.common.utils
 		{
 			return degrees * DEGTORAD;
 		}
+		
+		/**
+		 * Returns the same as the native Math.random() but allows 
+		 * another random number generator to be used.
+		 * 
+		 * @return The random number (between 0 and 1)
+		 * @see randomHandler
+		 */
+		[inline]
+		public static function random():Number
+		{
+			if (randomHandler == null) {
+				return Math.random();
+			}else {
+				return randomHandler();
+			}
+		}
+		
+		/**
+		 * Setting Maths.randomHandler will redirect all calls to
+		 * Maths.random() to this handler.
+		 * This allows for a custom random number generator to be used.
+		 */
+		public static var randomHandler:Function;
 	}
 }

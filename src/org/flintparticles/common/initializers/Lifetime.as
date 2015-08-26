@@ -32,6 +32,7 @@ package org.flintparticles.common.initializers
 {
 	import org.flintparticles.common.emitters.Emitter;
 	import org.flintparticles.common.particles.Particle;	
+	import org.flintparticles.common.utils.Maths;
 
 	/**
 	 * The Lifetime Initializer sets a lifetime for the particle. It is
@@ -117,7 +118,7 @@ package org.flintparticles.common.initializers
 			}
 			else
 			{
-				particle.lifetime = _min + Math.random() * ( _max - _min );
+				particle.lifetime = _min + Maths.random() * ( _max - _min );
 			}
 		}
 	}

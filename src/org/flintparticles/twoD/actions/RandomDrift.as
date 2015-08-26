@@ -33,6 +33,7 @@ package org.flintparticles.twoD.actions
 	import org.flintparticles.common.actions.ActionBase;
 	import org.flintparticles.common.emitters.Emitter;
 	import org.flintparticles.common.particles.Particle;
+	import org.flintparticles.common.utils.Maths;
 	import org.flintparticles.twoD.particles.Particle2D;	
 
 	/**
@@ -102,8 +103,8 @@ package org.flintparticles.twoD.actions
 		override public function update( emitter:Emitter, particle:Particle, time:Number ):void
 		{
 			var p:Particle2D = Particle2D( particle );
-			p.velX += ( Math.random() - 0.5 ) * _sizeX * time;
-			p.velY += ( Math.random() - 0.5 ) * _sizeY * time;
+			p.velX += ( Maths.random() - 0.5 ) * _sizeX * time;
+			p.velY += ( Maths.random() - 0.5 ) * _sizeY * time;
 		}
 	}
 }

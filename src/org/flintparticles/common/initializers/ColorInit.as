@@ -33,6 +33,7 @@ package org.flintparticles.common.initializers
 	import org.flintparticles.common.emitters.Emitter;
 	import org.flintparticles.common.particles.Particle;
 	import org.flintparticles.common.utils.interpolateColors;	
+	import org.flintparticles.common.utils.Maths;
 
 	/**
 	 * The ColorInit Initializer sets the color of the particle.
@@ -115,7 +116,7 @@ package org.flintparticles.common.initializers
 			}
 			else
 			{
-				particle.color = interpolateColors( _min, _max, Math.random() );
+				particle.color = interpolateColors( _min, _max, Maths.random() );
 			}
 		}
 	}

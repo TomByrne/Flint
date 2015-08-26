@@ -32,6 +32,7 @@ package org.flintparticles.common.initializers
 {
 	import org.flintparticles.common.emitters.Emitter;
 	import org.flintparticles.common.particles.Particle;	
+	import org.flintparticles.common.utils.Maths;
 
 	/**
 	 * The AlphaInit Initializer sets the alpha transparency of the particle.
@@ -127,7 +128,7 @@ package org.flintparticles.common.initializers
 			}
 			else
 			{
-				alpha = _min + Math.random() * ( _max - _min );
+				alpha = _min + Maths.random() * ( _max - _min );
 			}
 			particle.color = ( particle.color & 0xFFFFFF ) | ( Math.round( alpha * 255 ) << 24 );
 		}

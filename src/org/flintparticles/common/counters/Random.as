@@ -31,6 +31,7 @@
 package org.flintparticles.common.counters
 {
 	import org.flintparticles.common.emitters.Emitter;		
+	import org.flintparticles.common.utils.Maths;
 
 	/**
 	 * The Random counter causes the emitter to emit particles continuously
@@ -120,7 +121,7 @@ package org.flintparticles.common.counters
 		
 		private function newTimeToNext():Number
 		{
-			var rate:Number = Math.random() * ( _maxRate - _minRate ) + _maxRate;
+			var rate:Number = Maths.random() * ( _maxRate - _minRate ) + _maxRate;
 			return 1 / rate;
 		}
 		

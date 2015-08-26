@@ -33,6 +33,7 @@ package org.flintparticles.threeD.initializers
 	import org.flintparticles.common.emitters.Emitter;
 	import org.flintparticles.common.initializers.InitializerBase;
 	import org.flintparticles.common.particles.Particle;
+	import org.flintparticles.common.utils.Maths;
 	import org.flintparticles.threeD.geom.Vector3DUtils;
 	import org.flintparticles.threeD.particles.Particle3D;
 
@@ -143,7 +144,7 @@ package org.flintparticles.threeD.initializers
 			}
 			else
 			{
-				angle = _min + Math.random() * ( _max - _min );
+				angle = _min + Maths.random() * ( _max - _min );
 			}
 			var v:Vector3D = p.angVelocity;
 			v.x = axis.x * angle;

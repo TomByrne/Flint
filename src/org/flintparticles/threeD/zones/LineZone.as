@@ -30,6 +30,7 @@
 
 package org.flintparticles.threeD.zones 
 {
+	import org.flintparticles.common.utils.Maths;
 	import org.flintparticles.threeD.geom.Vector3DUtils;
 
 	import flash.geom.Vector3D;
@@ -120,7 +121,7 @@ package org.flintparticles.threeD.zones
 		public function getLocation():Vector3D
 		{
 			var len:Vector3D = _length.clone();
-			len.scaleBy( Math.random() );
+			len.scaleBy( Maths.random() );
 			return _start.add( len );
 		}
 		
